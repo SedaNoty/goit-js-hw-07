@@ -41,11 +41,11 @@ galleryPictures.addEventListener('click', e => {
 		if (e.key === 'Escape') {
 			instance.close()
 		}
-	})
-	galleryPictures.removeEventListener('keydown', e => {
-		if (e.key === 'Escape') {
-			instance.close()
-		}
-	})
+	}, {once: true})
+	// galleryPictures.removeEventListener('keydown', e => {
+	// 	if (e.key === 'Escape') {
+	// 		instance.close()
+	// 	}
+	// })
 
 })

@@ -35,7 +35,6 @@ galleryPictures.addEventListener('click', e => {
     const instance = basicLightbox.create(`
     <img src="${selectedImage}" width="800" height="600">
 `)
-
     instance.show()
     
     galleryPictures.addEventListener('keydown', e => {
@@ -43,4 +42,10 @@ galleryPictures.addEventListener('click', e => {
 			instance.close()
 		}
 	})
+	galleryPictures.removeEventListener('keydown', e => {
+		if (e.key === 'Escape') {
+			instance.close()
+		}
+	})
+
 })
